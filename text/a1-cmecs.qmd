@@ -20,8 +20,8 @@ library(readxl)
 cmecs <- readxl::read_xlsx(here('data', 'cmecs.xlsx'))
 
 cmecs |> kbl(align = "c") |> 
-  kable_styling(fixed_thead = T, font_size = 11) |> 
+  kable_styling(fixed_thead = T, full_width = TRUE, font_size = 8) |>
   row_spec(0, bold = T) |> 
   column_spec(1, border_right = T) |>
-  kable_classic(c('striped', 'hover'), full_width = F)
+  kable_classic(c('striped', 'hover'), full_width = T)
 ```
